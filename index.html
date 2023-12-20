@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>ETCH A SKETCH</h1>
+      <div class="topSection">
+        <div class="btnSection">
+          <button id="blackBtn">Black</button>
+          <button id="rainbowBtn">Rainbow</button>
+          <button id="eraserBtn">Eraser</button>
+          <button id="clearBtn">Clear</button>
+        </div>
+
+        <div class="rangeSection">
+          <div>
+            <div>
+              <p class="gridSize">Grid Size</p>
+              <input
+                type="range"
+                id="rangeSlider"
+                name="rangeSlider"
+                value="16"
+                min="1"
+                max="50"
+                onchange="rangeValue.value=`${value} X ${value}`"
+              />
+            </div>
+            <output id="rangeValue">16 x 16</output>
+          </div>
+          <button class="createBtn" id="createBtn">Create Grid</button>
+        </div>
+      </div>
+      <div class="container"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
